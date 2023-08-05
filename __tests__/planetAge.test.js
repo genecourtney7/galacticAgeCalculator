@@ -28,4 +28,9 @@ describe('Planet', () => {
         expect(myPlanet.calculateAge(earthAge,"Jupiter")).toBeCloseTo(expectedAge);
     });
 
+    test('should correctly calculate age on Saturn', () => {
+        const expectedAge = earthAge / 29.46;
+        expect(myPlanet.calculateAge(earthAge,"Saturn")).toBeCloseTo(expectedAge);
+    });
+
 })
