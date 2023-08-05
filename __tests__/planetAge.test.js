@@ -37,4 +37,9 @@ describe('Planet', () => {
         const expectedAge = earthAge / 84.07;
         expect(myPlanet.calculateAge(earthAge,"Uranus")).toBeCloseTo(expectedAge);
     });
+
+    test('should correctly calculate age on Neptune', () => {
+        const expectedAge = earthAge / 164.8;
+        expect(myPlanet.calculateAge(earthAge,"Neptune")).toBeCloseTo(expectedAge);
+    });
 })
