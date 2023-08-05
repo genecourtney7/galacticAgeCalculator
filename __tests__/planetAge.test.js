@@ -18,4 +18,9 @@ describe('Planet', () => {
         expect(myPlanet.calculateAge(earthAge, "Earth")).toBe(earthAge);
     });
 
+    test('should correctly calculate age on Mars', () => {
+        const expectedAge = earthAge / 1.881;
+        expect(myPlanet.calculateAge(earthAge,"Mars")).toBeCloseTo(expectedAge);
+    });
+
 })
