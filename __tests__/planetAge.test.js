@@ -1,11 +1,12 @@
-import Planet from '../src/js/planetAge'
+import Planet from '../src/js/planetAge.js';
 
 describe('Planet', () => {
-    
-    test('It should correctly calculate age on Earth', () => {
-        const earth = new Planet ("Earth", 1);
-        const earthAge = 25;
-        
-        expect(earth.calculateAge(earthAge)).toBe(earthAge);
+    const myPlanet = new Planet ();
+    const earthAge = 26;
+
+    test('should correctly calculate age on Mercury', () => {
+        const expectedAge =earthAge / 0.241;
+        expect(myPlanet.calculateAge(earthAge,"Mercury")).toBeCloseTo(expectedAge);
     });
-});
+    
+})
