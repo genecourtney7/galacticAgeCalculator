@@ -20,7 +20,7 @@
 
 
 ## Setup/Installation Requirements
-* Clone this repository: $ git clone https://
+* Clone this repository: $ git clone https://github.com/genecourtney7/galacticAgeCalculator.git
 * Run $ npm install
 * Start a development server with $ npm run start
 * Lint JS files in the src folder with $ npm run lint
