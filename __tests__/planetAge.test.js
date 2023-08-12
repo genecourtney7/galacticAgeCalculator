@@ -42,4 +42,10 @@ describe('Planet', () => {
         const expectedAge = earthAge / 164.8;
         expect(myPlanet.calculateAge(earthAge,"Neptune")).toBeCloseTo(expectedAge);
     });
+
+    test('should throw an error for an invalid planet name', () => {
+        expect(() => myPlanet.calculateAge(earthAge, 'InvalidPlanet')).toThrowError('Invalid planet name: InvalidPlanet');
+    });
+
 })
+
