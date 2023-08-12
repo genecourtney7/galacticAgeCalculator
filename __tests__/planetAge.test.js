@@ -51,5 +51,10 @@ describe('Planet', () => {
         const pastDate = new Date('2000-01-01');
         expect(myPlanet.yearsSince(pastDate, 'Mercury')).toBeGreaterThan(95);
     });
+
+    test('should return the number of years since a past date on Venus', () => {
+        const pastDate = new Date('2000-01-01');
+        expect(myPlanet.yearsSince(pastDate, 'Venus')).toBeGreaterThan(37);
+    });
 })
 
