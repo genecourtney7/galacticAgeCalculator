@@ -47,5 +47,9 @@ describe('Planet', () => {
         expect(() => myPlanet.calculateAge(earthAge, 'InvalidPlanet')).toThrowError('Invalid planet name: InvalidPlanet');
     });
 
+    test('should return the number of years since a past date on Mercury', () => {
+        const pastDate = new Date('2000-01-01');
+        expect(myPlanet.yearsSince(pastDate, 'Mercury')).toBeGreaterThan(95);
+    });
 })
 
