@@ -71,5 +71,10 @@ describe('Planet', () => {
         const pastDate = new Date('2000-01-01');
         expect(myPlanet.yearsSince(pastDate, 'Jupiter')).toBeGreaterThan(1);
     });
+
+    test('should return the number of years since a past date on Saturn', () => {
+        const pastDate = new Date('2000-01-01');
+        expect(myPlanet.yearsSince(pastDate, 'Saturn')).toBeLessThan(1);
+    });
 })
 
