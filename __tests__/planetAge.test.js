@@ -111,5 +111,10 @@ describe('Planet', () => {
         const futureDate = new Date('2050-01-01');
         expect(myPlanet.yearsUntil(futureDate, 'Mars')).toBeGreaterThan(14);
     });
+
+    test('should return the number of years until a future date on Jupiter', () => {
+        const futureDate = new Date('2050-01-01');
+        expect(myPlanet.yearsUntil(futureDate, 'Jupiter')).toBeGreaterThan(1);
+    });
 })
 
