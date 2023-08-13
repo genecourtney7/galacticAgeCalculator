@@ -101,5 +101,12 @@ describe('Planet', () => {
         const futureDate = new Date('2050-01-01');
         expect(myPlanet.yearsUntil(futureDate, 'Venus')).toBeGreaterThan(41);
     });
+
+    test('should return the number of years until a future date on Earth', () => {
+        const futureDate = new Date('2050-01-01');
+        expect(myPlanet.yearsUntil(futureDate, 'Earth')).toBeGreaterThan(26);
+    });
+
+    
 })
 
