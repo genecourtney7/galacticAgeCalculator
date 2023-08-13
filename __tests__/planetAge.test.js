@@ -81,5 +81,15 @@ describe('Planet', () => {
         const pastDate = new Date('2000-01-01');
         expect(myPlanet.yearsSince(pastDate, 'Uranus')).toBeLessThan(1);
     });
+
+    test('should return the number of years since a past date on Neptune', () => {
+        const pastDate = new Date('2000-01-01');
+        expect(myPlanet.yearsSince(pastDate, 'Neptune')).toBeLessThan(1);
+    });
+
+    test('should throw an error for an invalid planet name', () => {
+        const pastDate = new Date('2000-01-01');
+        expect(() => myPlanet.yearsSince(pastDate, 'InvalidPlanet')).toThrowError('Invalid planet name: InvalidPlanet');
+    });
 })
 
