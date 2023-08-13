@@ -66,5 +66,10 @@ describe('Planet', () => {
         const pastDate = new Date('2000-01-01');
         expect(myPlanet.yearsSince(pastDate, 'Mars')).toBeGreaterThan(11);
     });
+
+    test('should return the number of years since a past date on Jupiter', () => {
+        const pastDate = new Date('2000-01-01');
+        expect(myPlanet.yearsSince(pastDate, 'Jupiter')).toBeGreaterThan(1);
+    });
 })
 
