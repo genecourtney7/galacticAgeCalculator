@@ -91,5 +91,10 @@ describe('Planet', () => {
         const pastDate = new Date('2000-01-01');
         expect(() => myPlanet.yearsSince(pastDate, 'InvalidPlanet')).toThrowError('Invalid planet name: InvalidPlanet');
     });
+
+    test('should return the number of years until a future date on Mercury', () => {
+        const futureDate = new Date('2050-01-01');
+        expect(myPlanet.yearsUntil(futureDate, 'Mercury')).toBeGreaterThan(107);
+    });
 })
 
