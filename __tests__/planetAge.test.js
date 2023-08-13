@@ -131,5 +131,10 @@ describe('Planet', () => {
         const futureDate = new Date('2050-01-01');
         expect(myPlanet.yearsUntil(futureDate, 'Neptune')).toBeLessThan(1);
     });
+
+    test('should throw an error for an invalid planet name', () => {
+        const futureDate = new Date('2050-01-01');
+        expect(() => myPlanet.yearsUntil(futureDate, 'InvalidPlanet')).toThrowError('Invalid planet name: InvalidPlanet');
+    });
 })
 
