@@ -126,5 +126,10 @@ describe('Planet', () => {
         const futureDate = new Date('2050-01-01');
         expect(myPlanet.yearsUntil(futureDate, 'Uranus')).toBeLessThan(1);
     });
+
+    test('should return the number of years until a future date on Neptune', () => {
+        const futureDate = new Date('2050-01-01');
+        expect(myPlanet.yearsUntil(futureDate, 'Neptune')).toBeLessThan(1);
+    });
 })
 
