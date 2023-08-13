@@ -116,5 +116,10 @@ describe('Planet', () => {
         const futureDate = new Date('2050-01-01');
         expect(myPlanet.yearsUntil(futureDate, 'Jupiter')).toBeGreaterThan(1);
     });
+
+    test('should return the number of years until a future date on Saturn', () => {
+        const futureDate = new Date('2050-01-01');
+        expect(myPlanet.yearsUntil(futureDate, 'Saturn')).toBeLessThan(1);
+    });
 })
 
